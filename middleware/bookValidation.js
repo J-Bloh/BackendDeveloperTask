@@ -85,18 +85,13 @@ const validateID = (req,res,next) => {
     try {
         let id = req.params.id
         id = id.replace(',', '.'); //if finnish expression allowed
-        if (!id) {
-            console.log("ID not included");
-            res.sendStatus(400);
-            return;
-        }
         if (id % 1 != 0) {
             console.log("ID is not a number or in right format");
             res.sendStatus(404);
             return;
         }
         if (id < 1) {
-            console.log("Error: Negative id");
+            console.log("Error: Bad id");
             res.sendStatus(404);
             return;
         }
