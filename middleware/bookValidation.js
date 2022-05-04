@@ -91,7 +91,7 @@ const validateID = (req,res,next) => {
             return;
         }
         if (id < 1) {
-            console.log("Error: Negative id");
+            console.log("Error: Bad id");
             res.sendStatus(404);
             return;
         }
