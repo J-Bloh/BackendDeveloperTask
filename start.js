@@ -24,7 +24,7 @@ const bookRoutes = require('./routes/bookRoutes');
 app.use(bookRoutes);
 
 app.all('*', (req,res) => {        
-  console.log("Bad URI!");
+  console.log("Bad URL!");
   res.sendStatus(400);
 });
 
