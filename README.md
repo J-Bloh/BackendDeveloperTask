@@ -4,4 +4,4 @@ A simple web backend that stores infromation about a book collection. Made for e
 
 --How to start application
 
-First clone repo, navigate to BackendDeveloperTask folder with terminal and install all dependencies with npm install command. To start application write nodemon start.js in console BackendDeveloperTask folder.
+First clone repo. Open BackendDeveloperTask folder in command prompt and install all dependencies with npm install command. To start application write nodemon start.js.
