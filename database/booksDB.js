@@ -1,9 +1,9 @@
 /*
     booksDB.js -- Database object configuration and connection with executors.
 */
-var sqlite3 = require('sqlite3').verbose();
+const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
-var db = new sqlite3.Database(path.resolve(__dirname,'./books.db'));
+const db = new sqlite3.Database(path.resolve(__dirname,'./books.db'));
 
 const executeRUN = (query, params) => {
     console.log("Params: " + params);

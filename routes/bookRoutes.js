@@ -1,11 +1,11 @@
 /*
     bookRoutes.js - routing for book table
 */
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-var ctrl = require('../controllers/bookController');
-var mw = require('../middleware/bookValidation')
+const ctrl = require('../controllers/bookController');
+const mw = require('../middleware/bookValidation')
 
 router.route('/books').
     get(mw.validateQuery,ctrl.fetch).

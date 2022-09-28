@@ -2,6 +2,16 @@
     bookValidation.js - Validation for query, ID param and JSON-object attributes
 */
 
+//Check if object contains right attributes
+const checkKeyRules = (values, keyRules) => {     
+    const keys = Object.keys(values);
+    const badKeys = keys.filter(key => !keyRules.includes(key));
+    if( badKeys.length > 0){
+        console.log("Keys not allowed: ", badKeys.join(","));
+        return true;
+    }
+    return false;
+}
 /*
     Query
 */
@@ -102,17 +112,6 @@ const validateID = (req,res,next) => {
         res.sendStatus(500);
         return
     }
-}
-
-//Check if object contains right attributes
-const checkKeyRules = (values, keyRules) => {     
-    const keys = Object.keys(values);
-    const badKeys = keys.filter(key => !keyRules.includes(key));
-    if( badKeys.length > 0){
-        console.log("Keys not allowed: ", badKeys.join(","));
-        return true;
-    }
-    return false;
 }
 
 module.exports = {
